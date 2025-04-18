@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c6ea2c5c75c443a63a0ef5a1ad8ac, type: 3}
+  m_Name: DataEnemy
+  m_EditorClassIdentifier: 
+  foldoutImportGUI: 1
+  documentId: 1LmazjyHnxvBDDmOnUU8-DvwfmLR06dGKD4nKsoicqnY
+  selectedTogglesIds:
+  - enemy_data
+  foldoutSerializationGUI: 0
+  serializationOutputPath: ../../Configs
+  serializationFileName: Configs.v0.1
+  serializationFormat: 0
+  content:
+    enemy_data:
+    - ID: e1
+      Prefab: Enemy_0
+      Health: 3
+      Attack_Speed: 0.3
+    - ID: e2
+      Prefab: Enemy_2
+      Health: 4
+      Attack_Speed: 0.5

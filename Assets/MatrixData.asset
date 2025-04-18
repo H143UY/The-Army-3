@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19b46a4ee569bf14890b8ed3e964a859, type: 3}
+  m_Name: MatrixData
+  m_EditorClassIdentifier: 
+  foldoutImportGUI: 1
+  documentId: 1LmazjyHnxvBDDmOnUU8-DvwfmLR06dGKD4nKsoicqnY
+  selectedTogglesIds:
+  - lv1
+  foldoutSerializationGUI: 0
+  serializationOutputPath: ../../Configs
+  serializationFileName: Configs.v0.1
+  serializationFormat: 0
+  content:
+    lv1:
+    - Colum1: '#1'
+      Colum2: '#1'
+      Colum3: '#1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: '#1'
+      Colum9: '#1'
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: '#e1'
+      Colum3: '#e1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: 
+      Colum9: 
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: 
+      Colum3: 
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: 
+      Colum9: '#e1'
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: '#1'
+      Colum3: '#1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: '#1'
+      Colum9: '#1'
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: '#1'
+      Colum3: '#1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: '#1'
+      Colum9: '#1'
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: '#1'
+      Colum3: '#1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: '#1'
+      Colum9: '#1'
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: '#1'
+      Colum3: '#1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: '#1'
+      Colum9: '#1'
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: 
+      Colum3: '#e1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: 
+      Colum9: '#e1'
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: 
+      Colum3: 
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: 
+      Colum9: 
+      Colum10: '#1'
+    - Colum1: '#1'
+      Colum2: '#1'
+      Colum3: '#1'
+      Colum4: '#1'
+      Colum5: '#1'
+      Colum6: '#1'
+      Colum7: '#1'
+      Colum8: '#1'
+      Colum9: '#1'
+      Colum10: '#1'
