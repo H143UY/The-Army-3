@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class WeponPlayerController : MonoBehaviour
 {
-    private Animator _animator;
+    public Animator _animator;
     public bool Attack;
-    private float AttSpeed;
+    public PlayerController playerController;
     void Start()
     {
         _animator = GetComponent<Animator>();
         Attack = true;
-        AttSpeed = 1f;
     }
 
     void Update()
@@ -28,7 +27,7 @@ public class WeponPlayerController : MonoBehaviour
     }
     public void PauseAnimator()
     {
-        StartCoroutine(PauseForSeconds(AttSpeed));
+        StartCoroutine(PauseForSeconds(PlayerController.instance.AttackSpeed));
     }
 
     private IEnumerator PauseForSeconds(float time)
@@ -36,5 +35,12 @@ public class WeponPlayerController : MonoBehaviour
         _animator.speed = 0;
         yield return new WaitForSeconds(time);
         _animator.speed = 1;
+    }
+    public void DoDamage()
+    {
+        if (playerController != null)
+        {
+            playerController.DoDamage(); 
+        }
     }
 }

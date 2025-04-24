@@ -16,6 +16,7 @@ MonoBehaviour:
   documentId: 1LmazjyHnxvBDDmOnUU8-DvwfmLR06dGKD4nKsoicqnY
   selectedTogglesIds:
   - lv1
+  - lv2
   foldoutSerializationGUI: 0
   serializationOutputPath: ../../Configs
   serializationFileName: Configs.v0.1
@@ -33,8 +34,8 @@ MonoBehaviour:
       Colum9: '#1'
       Colum10: '#1'
     - Colum1: '#1'
-      Colum2: '#e1'
-      Colum3: '#e1'
+      Colum2: '#e0'
+      Colum3: '#e0'
       Colum4: '#1'
       Colum5: '#1'
       Colum6: '#1'
@@ -50,7 +51,7 @@ MonoBehaviour:
       Colum6: '#1'
       Colum7: '#1'
       Colum8: 
-      Colum9: '#e1'
+      Colum9: '#e0'
       Colum10: '#1'
     - Colum1: '#1'
       Colum2: '#1'
@@ -94,13 +95,13 @@ MonoBehaviour:
       Colum10: '#1'
     - Colum1: '#1'
       Colum2: 
-      Colum3: '#e1'
+      Colum3: '#e0'
       Colum4: '#1'
       Colum5: '#1'
       Colum6: '#1'
       Colum7: '#1'
       Colum8: 
-      Colum9: '#e1'
+      Colum9: '#e0'
       Colum10: '#1'
     - Colum1: '#1'
       Colum2: 
@@ -122,3 +123,74 @@ MonoBehaviour:
       Colum8: '#1'
       Colum9: '#1'
       Colum10: '#1'
+    lv2:
+    - Colum1: '#2'
+      Colum2: '#2'
+      Colum3: '#2'
+      Colum4: '#2'
+      Colum5: '#2'
+      Colum6: '#2'
+      Colum7: '#2'
+      Colum8: '#2'
+      Colum9: '#2'
+      Colum10: '#2'
+    - Colum1: '#5'
+      Colum2: '#2'
+      Colum3: '#2'
+      Colum4: 
+      Colum5: 
+      Colum6: 
+      Colum7: '#e1'
+      Colum8: '#2'
+      Colum9: '#2'
+      Colum10: '#5'
+    - Colum1: '#2'
+      Colum2: '#2'
+      Colum3: '#2'
+      Colum4: '#2'
+      Colum5: '#2'
+      Colum6: '#2'
+      Colum7: '#2'
+      Colum8: '#2'
+      Colum9: '#2'
+      Colum10: '#2'
+    - Colum1: '#5'
+      Colum2: '#2'
+      Colum3: '#2'
+      Colum4: '#2'
+      Colum5: 
+      Colum6: 
+      Colum7: '#2'
+      Colum8: '#2'
+      Colum9: '#2'
+      Colum10: '#5'
+    - Colum1: '#2'
+      Colum2: '#2'
+      Colum3: '#2'
+      Colum4: '#e1'
+      Colum5: 
+      Colum6: 
+      Colum7: 
+      Colum8: '#2'
+      Colum9: '#2'
+      Colum10: '#2'
+    - Colum1: '#2'
+      Colum2: '#2'
+      Colum3: 
+      Colum4: 
+      Colum5: 
+      Colum6: '#e1'
+      Colum7: 
+      Colum8: '#e1'
+      Colum9: '#2'
+      Colum10: '#2'
+    - Colum1: '#2'
+      Colum2: '#2'
+      Colum3: '#2'
+      Colum4: '#2'
+      Colum5: '#2'
+      Colum6: '#2'
+      Colum7: '#2'
+      Colum8: '#2'
+      Colum9: '#2'
+      Colum10: '#2'

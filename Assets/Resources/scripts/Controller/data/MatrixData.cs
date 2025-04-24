@@ -54,5 +54,7 @@ public class MatrixData : SpreadsheetsContainerBase
     {
         [SpreadsheetPage("Level_1")]
         public List<Level> lv1;
+        [SpreadsheetPage("Level_2")]
+        public List<Level> lv2;
     }
 }

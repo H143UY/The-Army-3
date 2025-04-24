@@ -9,14 +9,12 @@ public class DrawMatrixController : MonoBehaviour
     public DataEnemy dataEnemy;
     public GameObject tilePrefab;
     public Transform rootTileParent;
-    public GameObject Enemy;
     private QuadTree<GameObject> quadTree;
-
-    void Start()
+    [SerializeField] private GameObject[] enemyPrefabs;
+    void Awake()
     {
         Rect worldBounds = new Rect(0, 0, 32, 32);
         quadTree = new QuadTree<GameObject>(worldBounds, 4);
-
         SpawnMatrix();
     }
 
@@ -28,49 +26,61 @@ public class DrawMatrixController : MonoBehaviour
         for (int y = 0; y < rows.Count; y++)
         {
             var row = rows[y];
-            for (int x = 0; x < 10; x++)
+            List<string> columns = row.GetAllColums(); // 👉 Lấy tất cả cột trước
+
+            for (int x = 0; x < columns.Count; x++)
             {
-                string rawValue = GetColumnValue(row, x);
+                string rawValue = columns[x]; // 👉 Không cần GetColumnValue nữa
                 string cellValue = CleanValue(rawValue);
-                if (cellValue != "")
+
+                if (cellValue.StartsWith("e"))
+                {
+                    string numberPart = cellValue.Substring(1);
+
+                    if (int.TryParse(numberPart, out int enemyIndex) && enemyIndex < enemyPrefabs.Length)
+                    {
+                        GameObject prefab = enemyPrefabs[enemyIndex];
+                        GameObject enemy = SmartPool.Instance.Spawn(prefab, rootTileParent.position, rootTileParent.rotation);
+                        enemy.transform.SetParent(rootTileParent, false);
+                        enemy.transform.localPosition = new Vector3(x * spacing, -y * spacing, 0);
+                        enemy.name = $"Enemy_{enemyIndex}";
+
+                        InforData enemyInfo = dataEnemy.GetEnemyInfoByID(cellValue);
+                        if (enemyInfo != null)
+                        {
+                            EnemyController enemyController = enemy.GetComponent<EnemyController>();
+                            if (enemyController != null && int.TryParse(enemyInfo.Health, out int health))
+                            {
+                                enemyController.SetHp(health);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Không tìm thấy enemy prefab cho {cellValue}");
+                    }
+                }
+                else
                 {
                     GameObject tile = SmartPool.Instance.Spawn(tilePrefab, Vector3.zero, Quaternion.identity);
                     tile.transform.SetParent(rootTileParent, false);
-                    Vector3 localOffset = new Vector3(x * spacing, -y * spacing, 0);
-                    tile.transform.localPosition = localOffset;
+                    tile.transform.localPosition = new Vector3(x * spacing, -y * spacing, 0);
 
                     TileData tileData = tile.GetComponent<TileData>();
-                    if (tileData != null)
+                    if (tileData != null && int.TryParse(cellValue, out int HpMatrix))
                     {
                         tileData.position = new Vector2Int(x, y);
-                        tileData.SetHp(cellValue);
+                        tileData.SetHp(HpMatrix);
                     }
 
-                    tile.name = $"Tile_{x}_{y}";
-                    quadTree.Insert(tile.transform.position, tile); 
+                    quadTree.Insert(tile.transform.position, tile);
                 }
             }
         }
     }
-    public static string CleanValue(string raw)
+    string CleanValue(string raw)
     {
         return raw.StartsWith("#") ? raw.Substring(1) : raw;
     }
-    string GetColumnValue(MatrixData.Level data, int columnIndex)
-    {
-        return columnIndex switch
-        {
-            0 => data.Colum1,
-            1 => data.Colum2,
-            2 => data.Colum3,
-            3 => data.Colum4,
-            4 => data.Colum5,
-            5 => data.Colum6,
-            6 => data.Colum7,
-            7 => data.Colum8,
-            8 => data.Colum9,
-            9 => data.Colum10,
-            _ => "0"
-        };
-    }
+
 }

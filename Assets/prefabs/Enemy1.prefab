@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 
 --- !u!1 &1733886425313741992
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.7, y: 3.11, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7172959728415074565}
@@ -288,6 +288,8 @@ MonoBehaviour:
   hp: 0
   canMove: 0
   RaycastCheck: {fileID: 5170022156380785266}
+  HpText: {fileID: 3448225559096566944}
+  attackSpeed: 0
 --- !u!50 &4577024149328344286
 Rigidbody2D:
   serializedVersion: 4
@@ -501,6 +503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: 0
+  attspeed: 0
+  EnemyController: {fileID: 0}
 --- !u!1 &5170022156380785266
 GameObject:
   m_ObjectHideFlags: 0

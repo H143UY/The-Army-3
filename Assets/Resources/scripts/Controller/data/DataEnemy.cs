@@ -11,23 +11,14 @@ public class DataEnemy : SpreadsheetsContainerBase
     [SpreadsheetContent]
     [SerializeField] listInfor content;
     public listInfor ContentContent => content;
-
-    public List<List<InforData>> GetAllColors()
+    public InforData GetEnemyInfoByID(string id)
     {
-        List<List<InforData>> allColors = new List<List<InforData>>();
-        FieldInfo[] fields = typeof(listInfor).GetFields(BindingFlags.Public | BindingFlags.Instance);
-        foreach (FieldInfo field in fields)
+        foreach (var info in content.enemy_data)
         {
-            if (field.FieldType == typeof(List<InforData>))
-            {
-                List<InforData> levelList = (List<InforData>)field.GetValue(content);
-                if (levelList != null)
-                {
-                    allColors.Add(levelList);
-                }
-            }
+            if (info.ID == id)
+                return info;
         }
-        return allColors;
+        return null;
     }
 }
 [Serializable]
@@ -35,7 +26,6 @@ public class DataEnemy : SpreadsheetsContainerBase
 public class InforData
 {
     public string ID;
-    public string Prefab;
     public string Health;
     public string Attack_Speed;
 }
